@@ -49,7 +49,7 @@ export default function AddIngredient() {
         <span className="text-green-700 font-semibold">Ingredient</span> &gt; Add Ingredient
       </div>
      {/* stepper */}
-    <Box sx={{ width: '100%'}}>
+    <Box sx={{ width: '100%', mt: '16px'}}>
         <Stepper activeStep={0} alternativeLabel sx={{
     '& .MuiStepIcon-root': {
       borderRadius: '50%',
