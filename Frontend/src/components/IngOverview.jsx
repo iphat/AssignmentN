@@ -35,22 +35,24 @@ export default function IngOther() {
         <Box sx={{ width: '100%', mb:2 }}>
           <Stepper activeStep={4} alternativeLabel sx={{
     '& .MuiStepIcon-root': {
-      color: '#464a4661', 
-      border: '2px solid #3A643B',
       borderRadius: '50%',
       backgroundColor: 'transparent',
     },
     '& .MuiStepIcon-root.Mui-active': {
-        color: '#464a4661',
+      color: '#464a4661',
       border: '2px solid #3A643B',
       borderRadius: '50%',
-      backgroundColor: 'transparent',
     },
+      '& .MuiStepIcon-root:not(.Mui-active):not(.Mui-completed)': {
+        borderRadius: '50%',
+        border: '2px solid #696c69ff', 
+        color: '#464a4661', 
+      },
         '& .MuiStepIcon-root.Mui-completed': {
       color: '#3A643B', 
     },
 
-  }} >
+  }}  >
             {steps.map((label) => (
               <Step key={label} >
                 <StepLabel className=''>{label}</StepLabel>
@@ -68,7 +70,7 @@ export default function IngOther() {
       autoComplete="off"
     >                        
           
-    <h6 className="">Plant Parts And Its Purpose</h6>
+    <h6 className="">General Information</h6>
       <div>
 
         <TextField

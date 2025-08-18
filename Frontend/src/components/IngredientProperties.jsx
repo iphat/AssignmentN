@@ -34,23 +34,25 @@ export default function IngredientProperties() {
       <div className="mt-2 pt-2 ">
               <Box sx={{ width: '100%', mb:2 }}>
                 <Stepper activeStep={2} alternativeLabel sx={{
-          '& .MuiStepIcon-root': {
-            color: '#464a4661', 
-            border: '2px solid #3A643B',
-            borderRadius: '50%',
-            backgroundColor: 'transparent',
-          },
-          '& .MuiStepIcon-root.Mui-active': {
-              color: '#464a4661',
-            border: '2px solid #3A643B',
-            borderRadius: '50%',
-            backgroundColor: 'transparent',
-          },
-              '& .MuiStepIcon-root.Mui-completed': {
-            color: '#3A643B', 
-          },
-      
-        }} >
+    '& .MuiStepIcon-root': {
+      borderRadius: '50%',
+      backgroundColor: 'transparent',
+    },
+    '& .MuiStepIcon-root.Mui-active': {
+      color: '#464a4661',
+      border: '2px solid #3A643B',
+      borderRadius: '50%',
+    },
+      '& .MuiStepIcon-root:not(.Mui-active):not(.Mui-completed)': {
+        borderRadius: '50%',
+        border: '2px solid #696c69ff', 
+        color: '#464a4661', 
+      },
+        '& .MuiStepIcon-root.Mui-completed': {
+      color: '#3A643B', 
+    },
+
+  }} >
                   {steps.map((label) => (
                     <Step key={label} >
                       <StepLabel className=''>{label}</StepLabel>

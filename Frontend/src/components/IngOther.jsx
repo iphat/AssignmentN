@@ -10,10 +10,13 @@ import StepLabel from '@mui/material/StepLabel';
 export default function IngOther() {
 
   const currencies = [
-    { value: 'USD', label: 'Select' },
-    { value: 'EUR', label: 'Select' },
-    { value: 'BTC', label: 'Select' },
-    { value: 'JPY', label: 'Select' },
+    { value: 'Select', label: 'Select' },
+    { value: 'EUR', label: 'Leaf' },
+    { value: 'BTC', label: 'Root' },
+    { value: 'JPY', label: 'Root Bark' },
+    { value: 'JPY', label: 'Fruit' },
+    { value: 'JPY', label: 'Juice' },
+    { value: 'JPY', label: 'Pulp' },
   ];
 
   const navigate = useNavigate();
@@ -35,17 +38,19 @@ export default function IngOther() {
         <Box sx={{ width: '100%', mb:2 }}>
           <Stepper activeStep={3} alternativeLabel sx={{
     '& .MuiStepIcon-root': {
-      color: '#464a4661', 
-      border: '2px solid #3A643B',
       borderRadius: '50%',
       backgroundColor: 'transparent',
     },
     '& .MuiStepIcon-root.Mui-active': {
-        color: '#464a4661',
+      color: '#464a4661',
       border: '2px solid #3A643B',
       borderRadius: '50%',
-      backgroundColor: 'transparent',
     },
+      '& .MuiStepIcon-root:not(.Mui-active):not(.Mui-completed)': {
+        borderRadius: '50%',
+        border: '2px solid #696c69ff', 
+        color: '#464a4661', 
+      },
         '& .MuiStepIcon-root.Mui-completed': {
       color: '#3A643B', 
     },
@@ -73,6 +78,19 @@ export default function IngOther() {
 
         <TextField
           size="small"
+          id="outlined-select-currency"
+          select
+          label="Vata"
+          defaultValue="Select"
+        >
+          {currencies.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          size="small"
           id="outlined-select-currency-native"
           label="Rasa"
           defaultValue="Type here.."
@@ -86,19 +104,6 @@ export default function IngOther() {
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
-          ))}
-        </TextField>
-        <TextField
-          size="small"
-          id="outlined-select-currency"
-          select
-          label="Vata"
-          defaultValue="EUR"
-        >
-          {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
           ))}
         </TextField>
      </div>
@@ -124,8 +129,8 @@ export default function IngOther() {
             <span style={{marginRight:'5.4rem'}}>Root </span><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem I</span>
            </div>           
         </div>
-
-        <div className="best">
+      
+        <div className="best mt-4">
          <TextField
           size="small"
           id="outlined-select-currency-native"

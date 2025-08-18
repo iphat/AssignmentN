@@ -56,7 +56,7 @@ border-radius: 50px;
     border-radius: 12px;
 }
 .desc{
-    width:500px
+    width:905px
 }
 .benefit{
   /* top:0; */
@@ -69,4 +69,29 @@ border-radius: 50px;
   padding: 12px 20px 12px 20px;
   line-height: 180%;
   color: #464646;
+}
+.gen{
+  width:290.67px;
+  /* height:54px; */
+}
+.box{
+ width:950px;
+ height:400px;
+/* opacity: 1; */
+top: 251px;
+left: 244px;
+border-radius: 16px;
+padding: 24px;
+gap: 24px;
+}
+
+.image{
+  width:220px;
+  height:220px;
+  background-color: #EAF2EA;
+}
+.icon-img{
+ border: 1.5px solid #0C140C;
+ width: 18px;
+ height:18px;
 }

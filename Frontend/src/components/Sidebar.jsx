@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import '../css/style.css';
-import Ingredient from '../components/Ingredient';
+import IngredientAdd from '../components/IngredientAdd';
 import IngredientBenefit from "../components/IngredientBenefit";
 import IngredientProperties from "../components/IngredientProperties";
 import IngOther from "../components/IngOther";
@@ -117,7 +117,7 @@ export default function Sidebar() {
       {/* Render routes next to sidebar */}
       <div className=" main-content ">
       <Routes>
-        <Route path="/ingredients/add" element={<Ingredient />} />
+        <Route path="/ingredients/add" element={<IngredientAdd />} />
         <Route path="/ingredients/benefit" element={<IngredientBenefit/>} />
         <Route path="/ingredients/properties" element={<IngredientProperties/>} />
         <Route path="/ingredients/other" element={<IngOther />} />
